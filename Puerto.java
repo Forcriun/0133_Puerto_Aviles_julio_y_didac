@@ -52,7 +52,7 @@ public class Puerto
 
         while(amarreActual < amarres.length && buscando){
             if(amarres[amarreActual] == null){
-                amarres[amarreActual] = new Alquiler(dias,barco);
+                amarres[amarreActual] = new Alquiler(dias,barco,amarreActual);
                 aDevolver = amarres[amarreActual].getPrecio();
                 buscando = false;
             }
@@ -81,7 +81,7 @@ public class Puerto
             }
         }
         else{
-            System.out.println("El amarre indicado no existe. Introduzca un número entre 1 y 4.");
+            System.out.println("El amarre indicado no existe. Introduzca un número entre 1 y 4.\n");
         }
 
         return aDevolver;

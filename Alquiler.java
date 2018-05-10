@@ -14,17 +14,20 @@ public class Alquiler
 
     private int numDias;
     private Barco barco;
+    private int posicionAmarre;
 
     /**
      * Constructor de objetos de la clase Alquiler.
      * 
-     * @param numDias Numero de dias que se va a ocupar el amarre.
-     * @param barco El barco que ocupara el amarre.
+     * @param numDias   Numero de dias que se va a ocupar el amarre.
+     * @param barco     El barco que ocupara el amarre.
+     * @param barco     La posicion en el puerto del amarre ocupado.
      */
-    public Alquiler(int numDias,Barco barco)
+    public Alquiler(int numDias,Barco barco,int posicionAmarre)
     {
         this.numDias = numDias;
         this.barco = barco;
+        this.posicionAmarre = posicionAmarre;
     }
 
     /**
@@ -50,6 +53,7 @@ public class Alquiler
     public String toString()
     {
         String aDevolder = "";
+        aDevolder += "Posicion de amarre: " + posicionAmarre + ".\n";
         aDevolder += "Dias ocupación: " + numDias + ".\n";
         aDevolder += barco;
         return aDevolder;
