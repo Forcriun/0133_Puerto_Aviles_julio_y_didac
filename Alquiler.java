@@ -52,10 +52,10 @@ public class Alquiler
      */
     public String toString()
     {
-        String aDevolder = "";
-        aDevolder += "Posicion de amarre: " + posicionAmarre + ".\n";
-        aDevolder += "Dias ocupación: " + numDias + ".\n";
-        aDevolder += barco;
-        return aDevolder;
+        String aDevolver = "";
+        aDevolver += "Posicion de amarre: " + posicionAmarre + ".\n";
+        aDevolver += "Dias ocupación: " + numDias + ".\n";
+        aDevolver += barco;
+        return aDevolver;
     }
 }

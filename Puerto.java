@@ -25,14 +25,7 @@ public class Puerto
      */
     public void verEstadoAmarres()
     {
-        for(int i = 0; i < amarres.length;i++){
-            if(amarres[i] != null){
-                System.out.println(amarres[i] + "\n");
-            }
-            else{
-                System.out.println("El amarre " + i + " está libre.\n");                
-            }
-        }
+        System.out.println(this);    
     }
 
     /**
@@ -81,7 +74,7 @@ public class Puerto
             }
         }
         else{
-            System.out.println("El amarre indicado no existe. Introduzca un número entre 1 y 4.\n");
+            System.out.println("El amarre indicado no existe. Introduzca un número entre 0 y 3.\n");
         }
 
         return aDevolver;
@@ -94,7 +87,17 @@ public class Puerto
      */
     public String toString()
     {
-        String aDevolder = "";
-        return aDevolder;
+        String aDevolver = "";
+
+        for(int i = 0; i < amarres.length;i++){
+            if(amarres[i] != null){
+                aDevolver += amarres[i] + "\n";
+            }
+            else{
+                aDevolver += "El amarre " + i + " está libre.\n";                
+            }
+        }
+
+        return aDevolver;
     }
 }
